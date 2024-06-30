@@ -1,3 +1,4 @@
+
 //maxtemperature
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.IntWritable;
@@ -75,3 +76,20 @@ maxvalue=Math.max(maxvalue, value.get());
 context.write(key, new IntWritable(maxvalue));
 }
 }
+
+
+
+
+
+// comands for terminal 
+// in cmd terminal
+cd documents
+dir
+scp *.frt hadoop@if address hadoop ka:/home/hadoop
+
+//to run open hadoop terminal
+startCDH.sh
+hadoop fs -put tempinput.txt shriinput.txt
+hadoop jar temp.jar maxtemperature shriinput.txt shrioutput
+hadoop fs -cat shrioutput/part -r-00000
+
