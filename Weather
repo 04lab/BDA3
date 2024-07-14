@@ -85,11 +85,11 @@ context.write(key, new IntWritable(maxvalue));
 // in cmd terminal
 cd documents
 dir
-scp *.frt hadoop@if address hadoop ka:/home/hadoop
+scp *.txt hadoop@if address hadoop ka:/home/hadoop
 
 //to run open hadoop terminal
 startCDH.sh
 hadoop fs -put tempinput.txt shriinput.txt
 hadoop jar temp.jar maxtemperature shriinput.txt shrioutput
-hadoop fs -cat shrioutput/part -r-00000
+hadoop fs -cat shrioutput/part-r-00000
 
